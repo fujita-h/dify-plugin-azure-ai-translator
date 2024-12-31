@@ -1,0 +1,57 @@
+identity:
+  author: fujita-h
+  name: azure_ai_translator
+  label:
+    en_US: Azure AI Translator
+    ja_JP: Azure AI 翻訳
+  description:
+    en_US: Break language barriers with text translation.
+    ja_JP: テキスト翻訳で言語の壁を取り払う
+  icon: 00800-icon-service-Translator-Text.svg
+  tags:
+    - utilities
+credentials_for_provider:
+  azure_ai_transtator_region:
+    type: text-input
+    required: true
+    label:
+      en_US: Region
+      ja_JP: リージョン
+    placeholder:
+      en_US: Enter Region Name
+      ja_JP: リージョン名を入力
+    url: https://portal.azure.com
+  azure_ai_transtator_text_translation_endpoint:
+    type: text-input
+    required: true
+    label:
+      en_US: Text Translation Endpoint URL
+      ja_JP: テキスト翻訳エンドポイントURL
+    placeholder:
+      en_US: https://api.cognitive.microsofttranslator.com/
+    default: https://api.cognitive.microsofttranslator.com/
+    url: https://portal.azure.com
+  azure_ai_transtator_document_translation_endpoint:
+    type: text-input
+    required: true
+    label:
+      en_US: Document Translation Endpoint URL
+      ja_JP: ドキュメント翻訳エンドポイントURL
+    placeholder:
+      en_US: https://{resouceName}.cognitiveservices.azure.com/
+    url: https://portal.azure.com
+  azure_ai_transtator_api_key:
+    type: secret-input
+    required: true
+    label:
+      en_US: API Key
+      ja_JP: APIキー
+    placeholder:
+      en_US: Enter API Key
+      ja_JP: APIキーを入力
+    url: https://portal.azure.com
+tools:
+  - tools/text_translate.yaml
+extra:
+  python:
+    source: provider/azure_ai_translator.py

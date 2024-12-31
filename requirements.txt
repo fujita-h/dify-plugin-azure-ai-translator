@@ -1,0 +1,3 @@
+dify_plugin
+azure-ai-translation-text==1.0.1
+azure-ai-translation-document==1.1.0

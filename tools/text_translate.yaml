@@ -1,0 +1,52 @@
+identity:
+  name: text_translate
+  author: fujita-h
+  label:
+    en_US: Text Translate
+    ja_JP: テキスト翻訳
+description:
+  human:
+    en_US: Translate input text to a target language.
+    ja_JP: 入力テキストを指定した言語に翻訳します。
+  llm: Translate input text to a target language.
+parameters:
+  - name: input_text
+    type: string
+    required: true
+    label:
+      en_US: Text to translate
+      ja_JP: 翻訳するテキスト
+    human_description:
+      en_US: Text to translate
+      ja_JP: 翻訳するテキスト
+    llm_description: Text to translate
+    form: llm
+  - name: source_language
+    type: string
+    required: false
+    label:
+      en_US: Language of the input text
+      ja_JP: 入力するテキストの言語
+    human_description:
+      en_US: Enter the ;anguage of the input text. ex) "en"
+      ja_JP: 入力するテキストの言語。(例) "en"
+    placeholder:
+      en_US: en
+    llm_description: Enter the language of the input text.
+    form: form
+  - name: target_languages
+    type: string
+    required: true
+    label:
+      en_US: Target languages
+      ja_JP: 翻訳する言語
+    human_description:
+      en_US: Enter the languages to translate the text to. Input as comma separated list. ex) "en, es, fr, ja"
+      ja_JP: 翻訳する言語をカンマ区切りで入力します。(例) "en, es, fr, ja"
+    placeholder:
+      en_US: en, es, fr, ja
+    llm_description: Enter the languages to translate the text to. Input as comma separated list. ex) "en, es, fr, ja"
+    form: form
+extra:
+  python:
+    source: tools/text_translate.py
