@@ -52,6 +52,7 @@ credentials_for_provider:
     url: https://portal.azure.com
 tools:
   - tools/text_translate.yaml
+  - tools/document_translate.yaml
 extra:
   python:
     source: provider/azure_ai_translator.py

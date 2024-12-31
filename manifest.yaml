@@ -1,17 +1,11 @@
-version: 0.0.1
+version: 0.0.2
 type: plugin
 author: fujita-h
 name: azure_ai_translator
 label:
-  en_US: azure_ai_translator
-  ja_JP: azure_ai_translator
-  zh_Hans: azure_ai_translator
-  pt_BR: azure_ai_translator
+  en_US: Azure AI Translator
 description:
   en_US: Break language barriers with text translation.
-  ja_JP: Break language barriers with text translation.
-  zh_Hans: Break language barriers with text translation.
-  pt_BR: Break language barriers with text translation.
 icon: 00800-icon-service-Translator-Text.svg
 resource:
   memory: 268435456

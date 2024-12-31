@@ -1,0 +1,52 @@
+identity:
+  name: document_translate
+  author: fujita-h
+  label:
+    en_US: Document Translate
+    ja_JP: ドキュメント翻訳
+description:
+  human:
+    en_US: Translate input document to a target language.
+    ja_JP: 入力ドキュメントを指定した言語に翻訳します。
+  llm: Translate input document to a target language.
+parameters:
+  - name: input_document_file
+    type: file
+    required: true
+    label:
+      en_US: Document file to translate
+      ja_JP: 翻訳するドキュメントファイル
+    human_description:
+      en_US: Document file to translate. Supported file type is TXT, TXV, TAB, CSV, HTML, HTM, MHTML, MHT, PPTX, XLSX, DOCX, MSG, XLF, XLIFF.
+      ja_JP: 翻訳するドキュメントファイル。対応形式は TXT, TXV, TAB, CSV, HTML, HTM, MHTML, MHT, PPTX, XLSX, DOCX, MSG, XLF, XLIFF です。
+    llm_description: Document file to translate. Supported file type is TXT, TXV, TAB, CSV, HTML, HTM, MHTML, MHT, PPTX, XLSX, DOCX, MSG, XLF, XLIFF.
+    form: llm
+  - name: source_language
+    type: string
+    required: false
+    label:
+      en_US: Language of the input document
+      ja_JP: 入力するドキュメントの言語
+    human_description:
+      en_US: Enter the ;anguage of the input document. ex) "en"
+      ja_JP: 入力するドキュメントの言語。(例) "en"
+    placeholder:
+      en_US: en
+    llm_description: Enter the language of the input document.
+    form: form
+  - name: target_language
+    type: string
+    required: true
+    label:
+      en_US: Target language
+      ja_JP: 翻訳する言語
+    human_description:
+      en_US: Enter the language to translate the document to. ex) "ja"
+      ja_JP: 翻訳する言語を入力します。(例) "ja"
+    placeholder:
+      en_US: en, es, fr, ja
+    llm_description: Enter the language to translate the document to. ex) "ja"
+    form: form
+extra:
+  python:
+    source: tools/document_translate.py
