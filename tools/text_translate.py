@@ -54,14 +54,14 @@ class TextTranslateTool(Tool):
             response = text_translator.translate(
                 body=[input_text], to_language=to_languages, from_language=from_language
             )
-            translation = response[0] if response else None
+            translated_text_item = response[0] if response else None
 
-            if translation:
-                translation_texts = [item["text"] for item in translation["translations"]]
-                translated_text = " ".join(translation_texts)
-
-                yield self.create_text_message(translated_text)
-                yield self.create_json_message(translation.as_dict())
+            if translated_text_item:
+                yield self.create_json_message(translated_text_item.as_dict())
+                translations = translated_text_item.translations or []
+                if len(translations) == 0:
+                    raise Exception("Failed to translate text")
+                yield self.create_text_message(translations[0].text)
             else:
                 raise Exception("Failed to translate text")
         except Exception as e:
