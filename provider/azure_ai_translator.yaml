@@ -51,8 +51,8 @@ credentials_for_provider:
       ja_JP: APIキーを入力
     url: https://portal.azure.com
 tools:
-  - tools/text_translate.yaml
-  - tools/document_translate.yaml
+  - tools/text_translation.yaml
+  - tools/document_translation.yaml
 extra:
   python:
     source: provider/azure_ai_translator.py

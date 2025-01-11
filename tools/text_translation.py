@@ -7,7 +7,7 @@ from dify_plugin import Tool
 from dify_plugin.entities.tool import ToolInvokeMessage
 
 
-class TextTranslateTool(Tool):
+class TextTranslationTool(Tool):
     def _invoke(self, tool_parameters: dict[str, Any]) -> Generator[ToolInvokeMessage]:
         # Ensure runtime and credentials
         if not self.runtime or not self.runtime.credentials:

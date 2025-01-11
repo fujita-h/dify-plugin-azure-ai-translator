@@ -2,7 +2,7 @@ identity:
   name: text_translate
   author: fujita-h
   label:
-    en_US: Text Translate
+    en_US: Text Translation
     ja_JP: テキスト翻訳
 description:
   human:
@@ -49,4 +49,4 @@ parameters:
     form: form
 extra:
   python:
-    source: tools/text_translate.py
+    source: tools/text_translation.py
