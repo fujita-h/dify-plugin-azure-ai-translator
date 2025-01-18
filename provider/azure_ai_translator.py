@@ -10,10 +10,10 @@ from dify_plugin.errors.tool import ToolProviderCredentialValidationError
 class AzureAiTranslatorProvider(ToolProvider):
     def _validate_credentials(self, credentials: dict[str, Any]) -> None:
         try:
-            region = credentials.get("azure_ai_transtator_region")
-            text_endpoint = credentials.get("azure_ai_transtator_text_translation_endpoint")
-            document_endpoint = credentials.get("azure_ai_transtator_document_translation_endpoint")
-            api_key = credentials.get("azure_ai_transtator_api_key")
+            region = credentials.get("region")
+            text_endpoint = credentials.get("text_translation_endpoint")
+            document_endpoint = credentials.get("document_translation_endpoint")
+            api_key = credentials.get("api_key")
 
             if not region:
                 raise Exception("Azure region is required")

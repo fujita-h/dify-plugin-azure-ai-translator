@@ -11,7 +11,7 @@ identity:
   tags:
     - utilities
 credentials_for_provider:
-  azure_ai_transtator_region:
+  region:
     type: text-input
     required: true
     label:
@@ -21,7 +21,7 @@ credentials_for_provider:
       en_US: Enter Region Name
       ja_JP: リージョン名を入力
     url: https://portal.azure.com
-  azure_ai_transtator_text_translation_endpoint:
+  text_translation_endpoint:
     type: text-input
     required: true
     label:
@@ -31,7 +31,7 @@ credentials_for_provider:
       en_US: https://api.cognitive.microsofttranslator.com/
     default: https://api.cognitive.microsofttranslator.com/
     url: https://portal.azure.com
-  azure_ai_transtator_document_translation_endpoint:
+  document_translation_endpoint:
     type: text-input
     required: true
     label:
@@ -40,7 +40,7 @@ credentials_for_provider:
     placeholder:
       en_US: https://{resouceName}.cognitiveservices.azure.com/
     url: https://portal.azure.com
-  azure_ai_transtator_api_key:
+  api_key:
     type: secret-input
     required: true
     label:

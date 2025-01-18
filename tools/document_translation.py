@@ -15,9 +15,9 @@ class DocumentTranslationTool(Tool):
         if not self.runtime or not self.runtime.credentials:
             raise Exception("Tool runtime or credentials are missing")
 
-        region = self.runtime.credentials.get("azure_ai_transtator_region")
-        document_endpoint = self.runtime.credentials.get("azure_ai_transtator_document_translation_endpoint")
-        api_key = self.runtime.credentials.get("azure_ai_transtator_api_key")
+        region = self.runtime.credentials.get("region")
+        document_endpoint = self.runtime.credentials.get("document_translation_endpoint")
+        api_key = self.runtime.credentials.get("api_key")
 
         if not region:
             raise Exception("Azure region is required")
